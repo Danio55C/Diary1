@@ -1,5 +1,7 @@
 ﻿using Diary1.Commands;
 using Diary1.Models;
+using Diary1.Models.Domains;
+using Diary1.Models.Wrappers;
 using Diary1.Views;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
@@ -11,13 +13,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Xml.Linq;
 
 namespace Diary1.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
+        private Repository _repository = new Repository();
         public MainViewModel()
         {
+            //using (var context = new ApplicationDbContext())
+            //{
+            //    var students = context.Students.ToList();
+            //}
+
             AddStudentCommand = new RelayCommand(AddEdditStudent);
             EdditStudentCommand = new RelayCommand(AddEdditStudent, CanEditDeleteStudent);
             DeleteStudentCommand = new AsyncRelayCommand(DeleteStudent, CanEditDeleteStudent);
@@ -37,9 +46,9 @@ namespace Diary1.ViewModels
 
 
 
-        private Student _selectedStudent;
+        private StudentWrapper _selectedStudent;
 
-        public Student SelectedStudent
+        public StudentWrapper SelectedStudent
         {
             get { return _selectedStudent; }
             set
@@ -49,9 +58,9 @@ namespace Diary1.ViewModels
             }
         }
 
-        private ObservableCollection<Student> _students;
+        private ObservableCollection<StudentWrapper> _students;
 
-        public ObservableCollection<Student> Students
+        public ObservableCollection<StudentWrapper> Students
         {
             get { return _students; }
             set
@@ -94,7 +103,7 @@ namespace Diary1.ViewModels
 
         private bool CanEditDeleteStudent(object obj)
         {
-            return SelectedStudent == null;
+            return SelectedStudent != null;
         }
 
         private async Task DeleteStudent(object obj)
@@ -114,7 +123,7 @@ namespace Diary1.ViewModels
 
         private void AddEdditStudent(object obj)
         {
-            var addEditStudentWindow = new AddEdditStudentView(obj as Student);
+            var addEditStudentWindow = new AddEdditStudentView(obj as StudentWrapper);
             addEditStudentWindow.Closed += AddEditStudentWindow_Closed;
             addEditStudentWindow.ShowDialog();
         }
@@ -126,25 +135,25 @@ namespace Diary1.ViewModels
 
         private void RefreshDiary()
         {
-            Students = new ObservableCollection<Student>
+            Students = new ObservableCollection<StudentWrapper>
             {
-            new Student
+            new StudentWrapper
                 {
                  FirstName ="Kazimierz",
                     LastName="Szpin",
-                    Group=new Group {Id=1}
+                    Group=new GroupWrapper {Id=1}
                 },
-            new Student
+            new StudentWrapper
                 {
                  FirstName ="marek",
                     LastName="fasfasfas",
-                    Group=new Group {Id=2}
+                    Group=new GroupWrapper {Id=2}
                 },
-            new Student
+            new StudentWrapper
                 {
                  FirstName ="Kazimsafasfierz",
                     LastName="dgsgddsg",
-                    Group=new Group {Id=1}
+                    Group=new GroupWrapper {Id=1}
                 },
 
             };
@@ -152,12 +161,10 @@ namespace Diary1.ViewModels
 
         private void InitGroups()
         {
-            Groups = new ObservableCollection<Group>
-            {
-                new Group {Id=0,Name="Wszystkie"},
-                new Group {Id=1,Name="1A"},
-                new Group {Id=2,Name="2A"}
-            };
+            var groups = _repository.GetGroups();
+            groups.Insert(0, new Group { Id = 0, Name = "Wszystkie" });
+            Groups = new ObservableCollection<Group>(groups);
+            
             SelectedGroupId = 0;
         }
     }

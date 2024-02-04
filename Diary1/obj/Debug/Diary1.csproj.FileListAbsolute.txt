@@ -27,3 +27,11 @@ D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Views\AddEdditStudentView.g
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Views\MainWindow.g.cs
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Views\AddEdditStudentView.baml
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Views\MainWindow.baml
+D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\EntityFramework.dll
+D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\EntityFramework.SqlServer.dll
+D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\EntityFramework.xml
+D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\EntityFramework.SqlServer.xml
+D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1.Migrations.InitialCreate.resources
+D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1.Migrations.SetFirstNameMaxLenghtInStudentsTable.resources
+D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1.Migrations.addmigrationSetLastNameMaxLenghtAndRequiredInStudentsTable.resources
+D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1_Content.g.cs
