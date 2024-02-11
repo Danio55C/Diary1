@@ -35,3 +35,40 @@ D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1.Migrations.InitialCr
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1.Migrations.SetFirstNameMaxLenghtInStudentsTable.resources
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1.Migrations.addmigrationSetLastNameMaxLenghtAndRequiredInStudentsTable.resources
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1_Content.g.cs
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\Diary1.exe.config
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\Diary1.exe
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\Diary1.pdb
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\ControlzEx.dll
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\EntityFramework.dll
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\MahApps.Metro.dll
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\ControlzEx.pdb
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\ControlzEx.xml
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\EntityFramework.xml
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\MahApps.Metro.pdb
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\MahApps.Metro.xml
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\bin\Debug\de\MahApps.Metro.resources.dll
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.csproj.AssemblyReference.cache
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Views\AddEdditStudentView.g.cs
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Views\MainWindow.g.cs
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\App.g.cs
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1_Content.g.cs
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1_MarkupCompile.cache
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1_MarkupCompile.lref
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\App.baml
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Views\AddEdditStudentView.baml
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Views\MainWindow.baml
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.g.resources
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.Migrations.InitialCreate.resources
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.Migrations.SetFirstNameMaxLenghtInStudentsTable.resources
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.Migrations.addmigrationSetLastNameMaxLenghtAndRequiredInStudentsTable.resources
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.Properties.Resources.resources
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.csproj.GenerateResource.cache
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.csproj.CoreCompileInputs.cache
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.csproj.CopyComplete
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.exe
+C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.pdb

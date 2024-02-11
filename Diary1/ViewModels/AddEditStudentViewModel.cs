@@ -1,4 +1,5 @@
-﻿using Diary1.Commands;
+﻿using Diary;
+using Diary1.Commands;
 using Diary1.Models;
 using Diary1.Models.Domains;
 using Diary1.Models.Wrappers;
@@ -19,7 +20,7 @@ namespace Diary1.ViewModels
         public AddEditStudentViewModel(StudentWrapper student = null)
         {
             CloseCommand = new RelayCommand(Close);
-            CloseCommand = new RelayCommand(Confirm);
+            ConfirmCommand = new RelayCommand(Confirm);
 
             if (student==null)
             {
@@ -74,14 +75,14 @@ namespace Diary1.ViewModels
             }
         }
 
-        private ObservableCollection<Group> _groups;
+        private ObservableCollection<Group> _group;
 
         public ObservableCollection<Group> Groups
         {
-            get { return _groups; }
+            get { return _group; }
             set
             {
-                _groups = value;
+                _group = value;
                 OnPropertChanged();
             }
         }
@@ -102,12 +103,12 @@ namespace Diary1.ViewModels
 
         private void UpdateStudent()
         {
-            //baza danych
+            _repository.UpdateStudent(Student);
         }
 
         private void AddStudent()
         {
-            //baza danych
+            _repository.AddStudent(Student);
         }
 
         private void Close(object obj)
@@ -130,7 +131,7 @@ namespace Diary1.ViewModels
             groups.Insert(0, new Group { Id = 0, Name = "-- brak--" });
             Groups = new ObservableCollection<Group>(groups);
 
-            SelectedGroupId = 0;
+            SelectedGroupId = Student.Group.Id;
         }
     }
 

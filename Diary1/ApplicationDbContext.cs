@@ -16,7 +16,7 @@ namespace Diary1
 
         public DbSet<Student> Students { get; set; }
         public DbSet<Group> Groups { get; set; }
-        public DbSet<Rating> Rating { get; set; }
+        public DbSet<Rating> Ratings { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

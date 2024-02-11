@@ -58,12 +58,12 @@
                   Grid.Row="8" 
                   Margin="5" 
                   ItemsSource="{Binding Groups}"
-                  SelectedValue="{Binding Student.Group.Id}"
+                  SelectedValue="{Binding Student.Group.Id, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
                   DisplayMemberPath="Name"
                   SelectedValuePath="Id"
                   />
         
-        <CheckBox Content="Zajęcia Dodatkowe" Grid.Column="1" Grid.Row="9" Margin="5" />
+        <CheckBox IsChecked="{Binding Student.Activities}" Content="Zajęcia Dodatkowe" Grid.Column="1" Grid.Row="9" Margin="5" />
 
         <Label  Grid.Row="10" Content="Uwagi" Margin="5" />
         <TextBox 

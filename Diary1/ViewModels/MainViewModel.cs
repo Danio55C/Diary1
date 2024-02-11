@@ -1,4 +1,5 @@
-﻿using Diary1.Commands;
+﻿using Diary;
+using Diary1.Commands;
 using Diary1.Models;
 using Diary1.Models.Domains;
 using Diary1.Models.Wrappers;
@@ -14,6 +15,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Xml.Linq;
+
 
 namespace Diary1.ViewModels
 {
@@ -31,8 +33,8 @@ namespace Diary1.ViewModels
             EdditStudentCommand = new RelayCommand(AddEdditStudent, CanEditDeleteStudent);
             DeleteStudentCommand = new AsyncRelayCommand(DeleteStudent, CanEditDeleteStudent);
             RefreshStudentsCommand = new RelayCommand(RefreshStudents);
-            InitGroups();
             RefreshDiary();
+            InitGroups();
         }
 
 
@@ -82,14 +84,14 @@ namespace Diary1.ViewModels
             }
         }
 
-        private ObservableCollection<Group> _groups;
+        private ObservableCollection<Group> _group;
 
         public ObservableCollection<Group> Groups
         {
-            get { return _groups; }
+            get { return _group; }
             set
             {
-                _groups = value;
+                _group = value;
                 OnPropertChanged();
             }
         }
@@ -109,13 +111,16 @@ namespace Diary1.ViewModels
         private async Task DeleteStudent(object obj)
         {
             var metroWindow = Application.Current.MainWindow as MetroWindow;
-            var dialog = await metroWindow.ShowMessageAsync("Usuwanie ucznia", $"Czy napewno chcesz usunąć ucznia {SelectedStudent.FirstName} {SelectedStudent.LastName} ?", MessageDialogStyle.AffirmativeAndNegative);
+            var dialog = await metroWindow.ShowMessageAsync(
+                "Usuwanie ucznia",
+                $"Czy na pewno chcesz usunąć ucznia {SelectedStudent.FirstName} {SelectedStudent.LastName}?",
+                MessageDialogStyle.AffirmativeAndNegative);
 
             if (dialog != MessageDialogResult.Affirmative)
                 return;
 
+            _repository.DeleteStudent(SelectedStudent.Id);
 
-            //usuwanie z bazy danych
             RefreshDiary();
         }
 
@@ -135,28 +140,8 @@ namespace Diary1.ViewModels
 
         private void RefreshDiary()
         {
-            Students = new ObservableCollection<StudentWrapper>
-            {
-            new StudentWrapper
-                {
-                 FirstName ="Kazimierz",
-                    LastName="Szpin",
-                    Group=new GroupWrapper {Id=1}
-                },
-            new StudentWrapper
-                {
-                 FirstName ="marek",
-                    LastName="fasfasfas",
-                    Group=new GroupWrapper {Id=2}
-                },
-            new StudentWrapper
-                {
-                 FirstName ="Kazimsafasfierz",
-                    LastName="dgsgddsg",
-                    Group=new GroupWrapper {Id=1}
-                },
-
-            };
+            Students = new ObservableCollection<StudentWrapper>(
+                _repository.GetStudents(SelectedGroupId));
         }
 
         private void InitGroups()
