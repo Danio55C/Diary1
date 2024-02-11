@@ -33,10 +33,10 @@
         <TextBox Text= "{Binding Student.Id}" IsReadOnly="True" Grid.Row="0" Grid.Column="1" Margin="5" Visibility="{Binding IsUpdate, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
         <Label  Grid.Row="1" Content="Imie" Margin="5" />
-        <TextBox Grid.Row="1" Text="{Binding Student.FirstName}" Grid.Column="1" Margin="5" />
+        <TextBox Grid.Row="1" Text="{Binding Student.FirstName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Grid.Column="1" Margin="5" />
 
         <Label  Grid.Row="2" Content="Nazwisko" Margin="5" />
-        <TextBox Grid.Column="1" Grid.Row="2" Margin="5" Text="{Binding Student.LastName}" />
+        <TextBox Grid.Column="1" Grid.Row="2" Margin="5" Text="{Binding Student.LastName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
 
         <Label  Grid.Row="3" Content="Matematyka" Margin="5" />
         <TextBox Grid.Column="1" Grid.Row="3" Margin="5" Text="{Binding Student.Math}"/>

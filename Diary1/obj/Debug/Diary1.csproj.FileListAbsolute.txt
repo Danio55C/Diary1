@@ -11,24 +11,15 @@ D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1.csproj.GenerateResou
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1.csproj.CoreCompileInputs.cache
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1.exe
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1.pdb
-D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\ControlzEx.dll
-D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\MahApps.Metro.dll
-D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\Microsoft.Xaml.Behaviors.dll
-D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\ControlzEx.pdb
 D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\ControlzEx.xml
-D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\MahApps.Metro.pdb
 D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\MahApps.Metro.xml
-D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\Microsoft.Xaml.Behaviors.xml
-D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\de\MahApps.Metro.resources.dll
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\App.baml
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1.csproj.CopyComplete
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Views\AddEdditStudentView.g.cs
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Views\MainWindow.g.cs
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Views\AddEdditStudentView.baml
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Views\MainWindow.baml
-D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\EntityFramework.dll
-D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\EntityFramework.SqlServer.dll
 D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\EntityFramework.xml
 D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\EntityFramework.SqlServer.xml
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1.Migrations.InitialCreate.resources
@@ -72,3 +63,5 @@ C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.cspr
 C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.csproj.CopyComplete
 C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.exe
 C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.pdb
+D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1.csproj.Fody.CopyLocal.cache
