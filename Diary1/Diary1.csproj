@@ -245,6 +245,7 @@
     <Compile Include="Models\Domains\Rating.cs" />
     <Compile Include="Models\Domains\Student.cs" />
     <Compile Include="Models\Subject.cs" />
+    <Compile Include="Models\UserDatabaseSettings.cs" />
     <Compile Include="Models\Wrappers\GroupWrapper.cs" />
     <Compile Include="Models\Wrappers\StudentWrapper.cs" />
     <Compile Include="Repository.cs" />
