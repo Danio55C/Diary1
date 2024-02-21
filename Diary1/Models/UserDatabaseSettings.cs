@@ -11,11 +11,15 @@ namespace Diary1.Models
     public class UserDatabaseSettings
     {
 
+       
+
+
+
         public string ServerAdress
         {
             get
             {
-                return Settings.Default.ServerAdress = "(local)";
+                return Settings.Default.ServerAdress;
 
             }
             set
@@ -27,7 +31,7 @@ namespace Diary1.Models
         {
             get
             {
-                return Settings.Default.ServerName = "SQLEXPRESS";
+                return Settings.Default.ServerName;
             }
             set
             {
@@ -39,7 +43,7 @@ namespace Diary1.Models
         {
             get
             {
-                return Settings.Default.DataBaseName = "Diary";
+                return Settings.Default.DataBaseName;
             }
             set
             {
@@ -53,7 +57,7 @@ namespace Diary1.Models
         {
             get
             {
-                return Settings.Default.DataBaseUser = "danielsql";
+                return Settings.Default.DataBaseUser;
             }
             set
             {
@@ -64,7 +68,7 @@ namespace Diary1.Models
         {
             get
             {
-                return Settings.Default.DataBasePassword = "Genowefa123!";
+                return Settings.Default.DataBasePassword;
             }
             set
             {
@@ -72,8 +76,14 @@ namespace Diary1.Models
             }
         }
 
+        public string GetConnectionString()
+        {
+            return $"Server={ServerAdress}\\{ServerName};Database={DataBaseName};User Id={DataBaseUser};Password={DataBasePassword};";
+        }
 
 
+
+        //<add name = "ApplicationDbContext" connectionString=" Server=(local)\SQLEXPRESS;Database=Diary;User Id=danielsql;Password=Genowefa123!;" providerName="System.Data.SqlClient" />
     }
         
     
