@@ -149,7 +149,7 @@ namespace Diary1.ViewModels
             var groups = _repository.GetGroups();
             groups.Insert(0, new Group { Id = 0, Name = "Wszystkie" });
             Groups = new ObservableCollection<Group>(groups);
-            
+
             SelectedGroupId = 0;
         }
     }
