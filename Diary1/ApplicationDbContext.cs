@@ -40,11 +40,11 @@ namespace Diary1
         private static UserDatabaseSettings CreateSettings()
         {
             UserDatabaseSettings databaseSettings = new UserDatabaseSettings();
-            databaseSettings.ServerAdress = "(local)";
-            databaseSettings.ServerName = "SQLEXPRESS";
-            databaseSettings.DataBaseName = "Diary";
-            databaseSettings.DataBaseUser = "danielsql";
-            databaseSettings.DataBasePassword = "Genowefa123!";
+            //databaseSettings.ServerAdress;
+            //databaseSettings.ServerName;
+            //databaseSettings.DataBaseName;
+            //databaseSettings.DataBaseUser;
+            //databaseSettings.DataBasePassword; 
             return databaseSettings;
         }
 

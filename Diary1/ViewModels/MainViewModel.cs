@@ -33,17 +33,23 @@ namespace Diary1.ViewModels
             EdditStudentCommand = new RelayCommand(AddEdditStudent, CanEditDeleteStudent);
             DeleteStudentCommand = new AsyncRelayCommand(DeleteStudent, CanEditDeleteStudent);
             RefreshStudentsCommand = new RelayCommand(RefreshStudents);
+            EdditSettingsCommand = new RelayCommand(EdditSetings);
             RefreshDiary();
             InitGroups();
         }
 
+        private void EdditSetings(object obj)
+        {
+            Settings settingsWindow = new Settings();
+            settingsWindow.ShowDialog();
 
-
+        }
 
         public ICommand AddStudentCommand { get; set; }
         public ICommand EdditStudentCommand { get; set; }
         public ICommand DeleteStudentCommand { get; set; }
         public ICommand RefreshStudentsCommand { get; set; }
+        public ICommand EdditSettingsCommand { get; set; }
 
 
 
@@ -140,7 +146,7 @@ namespace Diary1.ViewModels
 
         private void RefreshDiary()
         {
-            Students = new ObservableCollection<StudentWrapper>(
+                Students = new ObservableCollection<StudentWrapper>(
                 _repository.GetStudents(SelectedGroupId));
         }
 

@@ -65,3 +65,5 @@ C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.exe
 C:\Users\daniel\Desktop\Nowy folder (3)\Diary1-main\Diary1\obj\Debug\Diary1.pdb
 D:\programowanie\kurs dotnet\Diary1\Diary1\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Diary1.csproj.Fody.CopyLocal.cache
+D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Views\Settings.g.cs
+D:\programowanie\kurs dotnet\Diary1\Diary1\obj\Debug\Views\Settings.baml

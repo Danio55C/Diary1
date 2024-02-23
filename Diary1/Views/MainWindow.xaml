@@ -44,17 +44,17 @@
                     Width="100" 
                     Margin="5"
                     />
-            <Button  Margin="2" Height="25" >
-                
+            <Button  Margin="2" Height="25" Command="{Binding EdditSettingsCommand}" >
+
                 <Button.Content>
                     <StackPanel   Orientation="Horizontal" Height="25" >
-                       <Label  Content="Ustawienia"  />
+                        <Label     Content="Ustawienia"  />
                         <Image    Width="50" Height="26" Source="https://w7.pngwing.com/pngs/276/802/png-transparent-gear-computer-icons-symbol-symbol-miscellaneous-text-logo.png" />
-                        
+
                     </StackPanel>
                 </Button.Content>
-                    
-            </Button> 
+
+            </Button>
         </StackPanel>
         <DataGrid 
             Grid.Row="1" 

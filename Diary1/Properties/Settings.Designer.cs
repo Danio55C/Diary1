@@ -25,7 +25,7 @@ namespace Diary1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("localhost")]
+        [global::System.Configuration.DefaultSettingValueAttribute("(localhost)")]
         public string ServerAdress {
             get {
                 return ((string)(this["ServerAdress"]));
@@ -49,7 +49,7 @@ namespace Diary1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("myDataBaseName")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Diary")]
         public string DataBaseName {
             get {
                 return ((string)(this["DataBaseName"]));
@@ -61,7 +61,7 @@ namespace Diary1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("user")]
+        [global::System.Configuration.DefaultSettingValueAttribute("danielsql")]
         public string DataBaseUser {
             get {
                 return ((string)(this["DataBaseUser"]));
@@ -73,7 +73,7 @@ namespace Diary1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("myPassword")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Genowefa123!")]
         public string DataBasePassword {
             get {
                 return ((string)(this["DataBasePassword"]));
