@@ -83,7 +83,7 @@ namespace Diary1.Models
 
 
 
-        //<add name = "ApplicationDbContext" connectionString=" Server=(local)\SQLEXPRESS;Database=Diary;User Id=danielsql;Password=Genowefa123!;" providerName="System.Data.SqlClient" />
+        //<add name = "ApplicationDbContext" connectionString=" Server=(local)\SQLEXPRESS;Database=Diary;User Id=sqldaniel;Password=1234;" providerName="System.Data.SqlClient" />
     }
         
     

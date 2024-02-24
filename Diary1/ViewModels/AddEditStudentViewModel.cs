@@ -22,7 +22,7 @@ namespace Diary1.ViewModels
             CloseCommand = new RelayCommand(Close);
             ConfirmCommand = new RelayCommand(Confirm);
 
-            if (student==null)
+            if (student == null)
             {
                 Student = new StudentWrapper();
             }
@@ -32,10 +32,10 @@ namespace Diary1.ViewModels
                 IsUpdate = true;
             }
             InitGroups();
-           
+
         }
 
-       
+
 
         public ICommand CloseCommand { get; set; }
         public ICommand ConfirmCommand { get; set; }
@@ -45,8 +45,8 @@ namespace Diary1.ViewModels
         public StudentWrapper Student
         {
             get { return _student; }
-            set 
-            { 
+            set
+            {
                 _student = value;
                 OnPropertChanged();
             }
@@ -93,15 +93,15 @@ namespace Diary1.ViewModels
             if (!Student.IsValid)
                 return;
 
-            
+
             if (!IsUpdate)
-            
+
                 AddStudent();
-            
+
             else
-            
+
                 UpdateStudent();
-            
+
             //zapis do bazy
             CloseWindow(obj as Window);
         }
@@ -118,10 +118,10 @@ namespace Diary1.ViewModels
 
         private void Close(object obj)
         {
-
-
             CloseWindow(obj as Window);
         }
+
+
 
         private void CloseWindow(Window window)
         {
@@ -129,7 +129,7 @@ namespace Diary1.ViewModels
         }
 
 
-       
+
         private void InitGroups()
         {
             var groups = _repository.GetGroups();
