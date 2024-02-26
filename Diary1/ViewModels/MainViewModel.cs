@@ -147,6 +147,7 @@ namespace Diary1.ViewModels
 
         private void RefreshDiary()
         {
+            
                 Students = new ObservableCollection<StudentWrapper>(
                 _repository.GetStudents(SelectedGroupId));
         }

@@ -11,7 +11,7 @@ namespace Diary1.Models
     public class UserDatabaseSettings
     {
 
-       
+
 
 
 
@@ -81,12 +81,16 @@ namespace Diary1.Models
             return $"Server={ServerAdress}\\{ServerName};Database={DataBaseName};User Id={DataBaseUser};Password={DataBasePassword};";
         }
 
+        public void Save()
+        {
+            Settings.Default.Save();
+        }
 
 
         //<add name = "ApplicationDbContext" connectionString=" Server=(local)\SQLEXPRESS;Database=Diary;User Id=sqldaniel;Password=1234;" providerName="System.Data.SqlClient" />
     }
-        
-    
+
+
 }
 
 

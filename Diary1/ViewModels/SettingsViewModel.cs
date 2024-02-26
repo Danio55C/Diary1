@@ -50,20 +50,13 @@ namespace Diary1.ViewModels
                 OnPropertChanged();
             }
         }
-
-
-
-
-
-
-
-
-
         private void Confirm(object obj)
         {
-            Settings.Default.Save();
+            UserSettings.Save();
             Process.Start(Application.ResourceAssembly.Location);
             Application.Current.Shutdown();
+
+            
 
         }
 
@@ -74,6 +67,15 @@ namespace Diary1.ViewModels
 
 
     }
+
+
+
+
+
+
+
+
+
 
 }
 

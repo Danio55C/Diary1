@@ -12,10 +12,10 @@
       <Value Profile="(Default)">Diary</Value>
     </Setting>
     <Setting Name="DataBaseUser" Type="System.String" Scope="User">
-      <Value Profile="(Default)">danielsql</Value>
+      <Value Profile="(Default)">sqldaniel</Value>
     </Setting>
     <Setting Name="DataBasePassword" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Genowefa123!</Value>
+      <Value Profile="(Default)">1234</Value>
     </Setting>
   </Settings>
 </SettingsFile>
