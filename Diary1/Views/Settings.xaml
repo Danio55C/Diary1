@@ -24,17 +24,17 @@
         </Grid.ColumnDefinitions>
 
         <Label Content="Adres Serwera:" Margin="5" />
-        <TextBox Text="{Binding UserSettings.ServerAdress, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"   Grid.Row="0" Grid.Column="1" Margin="5" />
+        <TextBox Text="{Binding UserDatabaseSettings.ServerAdress, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"   Grid.Row="0" Grid.Column="1" Margin="5" />
         <Label Grid.Row="1" Content="Nazwa Serwera" Margin="5" />
-        <TextBox Grid.Row="1"  Text="{Binding UserSettings.ServerName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Grid.Column="1" Margin="5" />
+        <TextBox Grid.Row="1"  Text="{Binding UserDatabaseSettings.ServerName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Grid.Column="1" Margin="5" />
 
         <Label Grid.Row="2" Content="Nazwa Bazy danych" Margin="5" />
-        <TextBox Grid.Column="1" Grid.Row="2" Margin="5" Text="{Binding UserSettings.DataBaseName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+        <TextBox Grid.Column="1" Grid.Row="2" Margin="5" Text="{Binding UserDatabaseSettings.DataBaseName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
         <Label Grid.Row="3" Content="Login do Bazy danych" Margin="5" />
-        <TextBox Grid.Column="1" Grid.Row="3" Margin="5" Text="{Binding UserSettings.DataBaseUser, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+        <TextBox Grid.Column="1" Grid.Row="3" Margin="5" Text="{Binding UserDatabaseSettings.DataBaseUser, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
         <Label Grid.Row="4" Content="Hasło do bazy Danych" Margin="5" />
         <TextBox Grid.Column="1" Grid.Row="4" Margin="5"
-                 Text="{Binding UserSettings.DataBasePassword, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                 Text="{Binding UserDatabaseSettings.DataBasePassword, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
         <StackPanel Orientation="Horizontal" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Right" >
             <Button Command="{Binding CloseCommand}" Content="Anuluj" Height="25" Width="100" Margin="5">
             </Button>

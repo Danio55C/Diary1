@@ -42,7 +42,7 @@ namespace Diary1.ViewModels
 
         private UserDatabaseSettings _settings;
         
-        public UserDatabaseSettings UserSettings
+        public UserDatabaseSettings UserDatabaseSettings
         {
             get { return _settings; }
             set { 
@@ -52,7 +52,8 @@ namespace Diary1.ViewModels
         }
         private void Confirm(object obj)
         {
-            UserSettings.Save();
+            UserDatabaseSettings.Save();
+            
             Process.Start(Application.ResourceAssembly.Location);
             Application.Current.Shutdown();
 

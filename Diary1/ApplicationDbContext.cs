@@ -13,8 +13,8 @@ namespace Diary1
     public class ApplicationDbContext : DbContext
     {
 
-        
 
+        
         public ApplicationDbContext()
             : base(CreateSettings().GetConnectionString())
         {
@@ -47,9 +47,9 @@ namespace Diary1
             //databaseSettings.DataBasePassword = "1234";
             return databaseSettings;
         }
-
-        
     }
+
+
 
    
 
