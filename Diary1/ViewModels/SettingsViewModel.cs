@@ -23,17 +23,17 @@ namespace Diary1.ViewModels
 
             ConfirmCommand = new RelayCommand(Confirm);
 
-            //UserDatabaseSettings userSettings = new UserDatabaseSettings
-            //{
-            //    ServerAdress = Settings.Default.ServerAdress,
-            //    ServerName = Settings.Default.ServerAdress,
-            //    DataBaseName = Settings.Default.ServerAdress,
-            //    DataBaseUser = Settings.Default.ServerAdress,
-            //    DataBasePassword = Settings.Default.ServerAdress,
-            //};
-
-
+            UserDatabaseSettings  = new UserDatabaseSettings
+            {
+                ServerAdress = Settings.Default.ServerAdress,
+                ServerName = Settings.Default.ServerName,
+                DataBaseName = Settings.Default.DataBaseName,
+                DataBaseUser = Settings.Default.DataBaseUser,
+                DataBasePassword = Settings.Default.DataBasePassword,
+            };
         }
+
+
 
         
 
@@ -69,16 +69,16 @@ namespace Diary1.ViewModels
 
     }
 
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
 
 
 
