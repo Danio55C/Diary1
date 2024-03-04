@@ -63,10 +63,14 @@ namespace Diary1.ViewModels
 
         private void Close(object obj)
         {
-            throw new NotImplementedException();
+            CloseWindow(obj as Window);
         }
 
+        private void CloseWindow(Window window)
+        {
 
+           window.Close();
+        }
     }
 
 }

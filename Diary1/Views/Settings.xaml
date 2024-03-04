@@ -36,7 +36,8 @@
         <TextBox Grid.Column="1" Grid.Row="4" Margin="5"
                  Text="{Binding UserDatabaseSettings.DataBasePassword, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
         <StackPanel Orientation="Horizontal" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Right" >
-            <Button Command="{Binding CloseCommand}" Content="Anuluj" Height="25" Width="100" Margin="5">
+            <Button Command="{Binding CloseCommand}" 
+                    Content="Anuluj" Height="25" Width="100" Margin="5">
             </Button>
 
             <Button Command="{Binding ConfirmCommand}" Content="Zatwierdź" Height="25" Width="100" Margin="5">

@@ -9,6 +9,8 @@ using MahApps.Metro.Controls.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,13 +24,16 @@ namespace Diary1.ViewModels
     public class MainViewModel : ViewModelBase
     {
         private Repository _repository = new Repository();
+
         public MainViewModel()
         {
             //using (var context = new ApplicationDbContext())
             //{
             //    var students = context.Students.ToList();
             //}
-            
+
+
+
             AddStudentCommand = new RelayCommand(AddEdditStudent);
             EdditStudentCommand = new RelayCommand(AddEdditStudent, CanEditDeleteStudent);
             DeleteStudentCommand = new AsyncRelayCommand(DeleteStudent, CanEditDeleteStudent);
@@ -36,12 +41,56 @@ namespace Diary1.ViewModels
             EdditSettingsCommand = new RelayCommand(EdditSetings);
             RefreshDiary();
             InitGroups();
-            
+
         }
-       
+        static public void MyWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (IsServerConnected(CreateSettings().GetConnectionString()))
+            {
+                MessageBox.Show("Test");
+            }
+            else
+            {
+                MessageBox.Show("dupa");
+            }
+
+        }
+
+        private static bool IsServerConnected(string connectionString)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+
+                if (connection.State.ToString() =="Open" )
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+        }
+
+
+
+
+
+
+
+
+        private static UserDatabaseSettings CreateSettings()
+        {
+            UserDatabaseSettings databaseSettings = new UserDatabaseSettings();
+
+            return databaseSettings;
+        }
+
         private void EdditSetings(object obj)
         {
             Settings settingsWindow = new Settings();
+
             settingsWindow.ShowDialog();
 
         }
@@ -147,9 +196,9 @@ namespace Diary1.ViewModels
 
         private void RefreshDiary()
         {
-            
-                Students = new ObservableCollection<StudentWrapper>(
-                _repository.GetStudents(SelectedGroupId));
+
+            Students = new ObservableCollection<StudentWrapper>(
+            _repository.GetStudents(SelectedGroupId));
         }
 
         private void InitGroups()
