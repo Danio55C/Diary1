@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:Diary1"
+       
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Dziennik ucznia" Height="450" Width="900">

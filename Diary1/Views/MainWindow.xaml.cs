@@ -1,7 +1,9 @@
 ﻿using Diary1.ViewModels;
 using MahApps.Metro.Controls;
+using MahApps.Metro.Controls.Dialogs;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +28,16 @@ namespace Diary1.Views
         {
             InitializeComponent();
             DataContext = new MainViewModel();
-            Loaded +=  MainViewModel.MyWindow_Loaded;
+            Loaded += MainViewModel.MyWindow_Loaded;
         }
+        //async void OnLoad(object sender, RoutedEventArgs e)
+        //{
+        //    MessageBox.Show("asdasf22");
+        //    MessageBox.Show("dupa2");
+            
+        //}
+        
+
+        
     }
 }

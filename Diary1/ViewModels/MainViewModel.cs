@@ -33,45 +33,108 @@ namespace Diary1.ViewModels
             //}
 
 
-
+            
             AddStudentCommand = new RelayCommand(AddEdditStudent);
             EdditStudentCommand = new RelayCommand(AddEdditStudent, CanEditDeleteStudent);
             DeleteStudentCommand = new AsyncRelayCommand(DeleteStudent, CanEditDeleteStudent);
             RefreshStudentsCommand = new RelayCommand(RefreshStudents);
             EdditSettingsCommand = new RelayCommand(EdditSetings);
+            //LoadedWindowCommand = new RelayCommand(Loaded);
+
+            
+
+
             RefreshDiary();
             InitGroups();
 
         }
-        static public void MyWindow_Loaded(object sender, RoutedEventArgs e)
+        public static async void MyWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            if (IsServerConnected(CreateSettings().GetConnectionString()))
-            {
-                MessageBox.Show("Test");
-            }
-            else
-            {
-                MessageBox.Show("dupa");
-            }
-
-        }
-
-        private static bool IsServerConnected(string connectionString)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            MessageBox.Show("Test23224");
+            if (!IsServerConnected())
             {
 
-                if (connection.State.ToString() =="Open" )
+                var metroWindow = Application.Current.MainWindow as MetroWindow;
+                var dialog = await metroWindow.ShowMessageAsync("Błąd połączenia z serwerem!!",
+                "Nie udało się połaczyć z serwerem bazy danych, czy chcesz edytować ustawienia połaczenia ?",
+                MessageDialogStyle.AffirmativeAndNegative);
+                if (dialog == MessageDialogResult.Affirmative)
                 {
-                    return true;
+                    Settings settingsWindow = new Settings();
+
+                    settingsWindow.ShowDialog();
                 }
                 else
                 {
-                    return false;
+                    Application.Current.Shutdown();
                 }
 
+
             }
+
         }
+        private static bool IsServerConnected()
+        {
+
+
+            try
+            {
+                using (var context = new ApplicationDbContext())
+                {
+                    context.Database.Connection.Open();
+                    context.Database.Connection.Close();
+                }
+                return true;
+            }
+            catch (SqlException)
+            {
+                return false;
+            }
+
+        }
+
+        //static public void Window_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    MessageBox.Show("dupa");
+        //    if (!IsServerConnected())
+        //    {
+        //        MessageBox.Show("Test");
+        //    }
+
+        //}
+
+
+
+        //using (var context = new ApplicationDbContext())
+        //{
+        //    context.Database.Connection.Open();
+        //    if (context.Database.Connection.State == ConnectionState.Open)
+        //    {
+        //        MessageBox.Show("Test");
+        //        return true;
+
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("dupa");
+        //        return false;
+        //    }
+
+        //}
+
+
+
+
+        // }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -100,6 +163,8 @@ namespace Diary1.ViewModels
         public ICommand DeleteStudentCommand { get; set; }
         public ICommand RefreshStudentsCommand { get; set; }
         public ICommand EdditSettingsCommand { get; set; }
+
+        public ICommand LoadedWindowCommand { get; set; }
 
 
 
