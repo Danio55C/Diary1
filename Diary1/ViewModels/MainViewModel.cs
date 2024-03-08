@@ -33,7 +33,7 @@ namespace Diary1.ViewModels
             //}
 
 
-            
+
             AddStudentCommand = new RelayCommand(AddEdditStudent);
             EdditStudentCommand = new RelayCommand(AddEdditStudent, CanEditDeleteStudent);
             DeleteStudentCommand = new AsyncRelayCommand(DeleteStudent, CanEditDeleteStudent);
@@ -41,7 +41,7 @@ namespace Diary1.ViewModels
             EdditSettingsCommand = new RelayCommand(EdditSetings);
             //LoadedWindowCommand = new RelayCommand(Loaded);
 
-            
+
 
 
             RefreshDiary();
@@ -93,15 +93,7 @@ namespace Diary1.ViewModels
 
         }
 
-        //static public void Window_Loaded(object sender, RoutedEventArgs e)
-        //{
-        //    MessageBox.Show("dupa");
-        //    if (!IsServerConnected())
-        //    {
-        //        MessageBox.Show("Test");
-        //    }
 
-        //}
 
 
 
@@ -120,29 +112,7 @@ namespace Diary1.ViewModels
         //        return false;
         //    }
 
-        //}
-
-
-
-
-        // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //}
         private static UserDatabaseSettings CreateSettings()
         {
             UserDatabaseSettings databaseSettings = new UserDatabaseSettings();
@@ -276,3 +246,25 @@ namespace Diary1.ViewModels
         }
     }
 }
+
+
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

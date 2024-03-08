@@ -30,12 +30,7 @@ namespace Diary1.Views
             DataContext = new MainViewModel();
             Loaded += MainViewModel.MyWindow_Loaded;
         }
-        //async void OnLoad(object sender, RoutedEventArgs e)
-        //{
-        //    MessageBox.Show("asdasf22");
-        //    MessageBox.Show("dupa2");
-            
-        //}
+        
         
 
         
