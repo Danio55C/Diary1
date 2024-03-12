@@ -80,6 +80,9 @@ namespace Diary1 {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main() {
+            SplashScreen splashScreen = new SplashScreen("properties/progress-loading-bar-buffering-download-upload-and-loading-icon-vector" +
+                    ".jpg");
+            splashScreen.Show(true);
             Diary1.App app = new Diary1.App();
             app.InitializeComponent();
             app.Run();

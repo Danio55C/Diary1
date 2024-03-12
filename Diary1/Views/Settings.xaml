@@ -7,7 +7,9 @@
         xmlns:local="clr-namespace:Diary1.Views"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
+        Name="SettingsView"
         Title="Ustawienia" Height="280" Width="400">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -37,10 +39,13 @@
                  Text="{Binding UserDatabaseSettings.DataBasePassword, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
         <StackPanel Orientation="Horizontal" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Right" >
             <Button Command="{Binding CloseCommand}" 
-                    Content="Anuluj" Height="25" Width="100" Margin="5">
+                 CommandParameter="{Binding ElementName=SettingsView}"
+                 Content="Anuluj" Height="25" Width="100" Margin="5">
             </Button>
 
-            <Button Command="{Binding ConfirmCommand}" Content="Zatwierdź" Height="25" Width="100" Margin="5">
+            <Button Command="{Binding ConfirmCommand}" 
+                 CommandParameter="{Binding ElementName=SettingsView}" 
+                Content="Zatwierdź" Height="25" Width="100" Margin="5">
             </Button>
 
 

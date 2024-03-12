@@ -1,0 +1,17 @@
+ try
+ {
+     using (SqlConnection connection = new SqlConnection(connectionString))
+
+     {
+         connection.Open();
+         connection.Close();
+         
+
+     }
+
+     return true;
+ }
+ catch (Exception)
+ {
+     return false;
+ }

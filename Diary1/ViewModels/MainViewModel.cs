@@ -39,18 +39,18 @@ namespace Diary1.ViewModels
             DeleteStudentCommand = new AsyncRelayCommand(DeleteStudent, CanEditDeleteStudent);
             RefreshStudentsCommand = new RelayCommand(RefreshStudents);
             EdditSettingsCommand = new RelayCommand(EdditSetings);
-            //LoadedWindowCommand = new RelayCommand(Loaded);
+            LoadedWindowCommand = new RelayCommand(LoadedWindow);
 
 
 
 
-            RefreshDiary();
-            InitGroups();
+
 
         }
-        public static async void MyWindow_Loaded(object sender, RoutedEventArgs e)
+
+        private async void LoadedWindow(object obj)
         {
-            MessageBox.Show("Test23224");
+            
             if (!IsServerConnected())
             {
 
@@ -71,12 +71,17 @@ namespace Diary1.ViewModels
 
 
             }
+            else
+            {
 
+                RefreshDiary();
+                InitGroups();
+            }
         }
+
+       
         private static bool IsServerConnected()
         {
-
-
             try
             {
                 using (var context = new ApplicationDbContext())
@@ -90,8 +95,10 @@ namespace Diary1.ViewModels
             {
                 return false;
             }
-
         }
+
+
+
 
 
 
@@ -112,32 +119,23 @@ namespace Diary1.ViewModels
         //        return false;
         //    }
 
-    //}
-        private static UserDatabaseSettings CreateSettings()
-        {
-            UserDatabaseSettings databaseSettings = new UserDatabaseSettings();
-
-            return databaseSettings;
-        }
+        //}
+        
 
         private void EdditSetings(object obj)
         {
             Settings settingsWindow = new Settings();
-
             settingsWindow.ShowDialog();
-
         }
+
+
 
         public ICommand AddStudentCommand { get; set; }
         public ICommand EdditStudentCommand { get; set; }
         public ICommand DeleteStudentCommand { get; set; }
         public ICommand RefreshStudentsCommand { get; set; }
         public ICommand EdditSettingsCommand { get; set; }
-
         public ICommand LoadedWindowCommand { get; set; }
-
-
-
 
         private StudentWrapper _selectedStudent;
 
@@ -151,6 +149,7 @@ namespace Diary1.ViewModels
             }
         }
 
+
         private ObservableCollection<StudentWrapper> _students;
 
         public ObservableCollection<StudentWrapper> Students
@@ -162,6 +161,7 @@ namespace Diary1.ViewModels
                 OnPropertChanged();
             }
         }
+
 
         private int _selectedGroupId;
 
@@ -186,9 +186,6 @@ namespace Diary1.ViewModels
                 OnPropertChanged();
             }
         }
-
-
-
         private void RefreshStudents(object obj)
         {
             RefreshDiary();
@@ -215,15 +212,12 @@ namespace Diary1.ViewModels
             RefreshDiary();
         }
 
-
-
         private void AddEdditStudent(object obj)
         {
             var addEditStudentWindow = new AddEdditStudentView(obj as StudentWrapper);
             addEditStudentWindow.Closed += AddEditStudentWindow_Closed;
             addEditStudentWindow.ShowDialog();
         }
-
         private void AddEditStudentWindow_Closed(object sender, EventArgs e)
         {
             RefreshDiary();
@@ -250,7 +244,15 @@ namespace Diary1.ViewModels
 
 
 
-         
+
+
+
+
+
+
+
+
+
 
 
 

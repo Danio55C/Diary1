@@ -28,7 +28,7 @@ namespace Diary1.Views
         {
             InitializeComponent();
             DataContext = new MainViewModel();
-            Loaded += MainViewModel.MyWindow_Loaded;
+            
         }
         
         
