@@ -30,9 +30,9 @@ namespace Diary1.Views
             DataContext = new MainViewModel();
             
         }
+    }
+}
         
         
 
         
-    }
-}

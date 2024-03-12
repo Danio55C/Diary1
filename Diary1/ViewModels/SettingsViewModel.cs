@@ -33,10 +33,6 @@ namespace Diary1.ViewModels
             };
         }
 
-
-
-        
-
         public ICommand CloseCommand { get; set; }
         public ICommand ConfirmCommand { get; set; }
 
@@ -50,17 +46,18 @@ namespace Diary1.ViewModels
                 OnPropertChanged();
             }
         }
+
+      
+
         private void Confirm(object obj)
         {
+            if (!UserDatabaseSettings.IsValid)
+                return;
             UserDatabaseSettings.Save();
             
             Process.Start(Application.ResourceAssembly.Location);
             Application.Current.Shutdown();
-
-            
-
         }
-
         private void Close(object obj)
         {
             CloseWindow(obj as Window);
@@ -71,9 +68,18 @@ namespace Diary1.ViewModels
 
            window.Close();
         }
+        
     }
 
 }
+
+
+        
+
+
+            
+
+
 
 
 

@@ -31,29 +31,28 @@ namespace Diary1.ViewModels
             //{
             //    var students = context.Students.ToList();
             //}
-
-
-
             AddStudentCommand = new RelayCommand(AddEdditStudent);
             EdditStudentCommand = new RelayCommand(AddEdditStudent, CanEditDeleteStudent);
             DeleteStudentCommand = new AsyncRelayCommand(DeleteStudent, CanEditDeleteStudent);
             RefreshStudentsCommand = new RelayCommand(RefreshStudents);
             EdditSettingsCommand = new RelayCommand(EdditSetings);
             LoadedWindowCommand = new RelayCommand(LoadedWindow);
-
-
-
-
-
-
         }
+
+
+
+
+
+
+
+
+
 
         private async void LoadedWindow(object obj)
         {
             
             if (!IsServerConnected())
             {
-
                 var metroWindow = Application.Current.MainWindow as MetroWindow;
                 var dialog = await metroWindow.ShowMessageAsync("Błąd połączenia z serwerem!!",
                 "Nie udało się połaczyć z serwerem bazy danych, czy chcesz edytować ustawienia połaczenia ?",
@@ -61,25 +60,20 @@ namespace Diary1.ViewModels
                 if (dialog == MessageDialogResult.Affirmative)
                 {
                     Settings settingsWindow = new Settings();
-
                     settingsWindow.ShowDialog();
                 }
                 else
                 {
                     Application.Current.Shutdown();
                 }
-
-
             }
             else
             {
-
                 RefreshDiary();
                 InitGroups();
             }
         }
 
-       
         private static bool IsServerConnected()
         {
             try
@@ -98,12 +92,6 @@ namespace Diary1.ViewModels
         }
 
 
-
-
-
-
-
-
         //using (var context = new ApplicationDbContext())
         //{
         //    context.Database.Connection.Open();
@@ -120,16 +108,13 @@ namespace Diary1.ViewModels
         //    }
 
         //}
-        
+
 
         private void EdditSetings(object obj)
         {
             Settings settingsWindow = new Settings();
             settingsWindow.ShowDialog();
         }
-
-
-
         public ICommand AddStudentCommand { get; set; }
         public ICommand EdditStudentCommand { get; set; }
         public ICommand DeleteStudentCommand { get; set; }
@@ -240,6 +225,21 @@ namespace Diary1.ViewModels
         }
     }
 }
+
+       
+
+
+
+
+
+
+
+
+        
+
+
+
+
 
 
 
