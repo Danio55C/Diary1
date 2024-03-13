@@ -17,8 +17,8 @@ namespace Diary1.Models.Domains
         }
         public int Id { get; set; }
         public string Name { get; set; }
-
         public ICollection<Student> Students { get; set; }
-
     }
 }
+
+

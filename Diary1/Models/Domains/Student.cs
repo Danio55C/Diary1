@@ -10,7 +10,6 @@ namespace Diary1.Models.Domains
 {
     public class Student
     {
-
         public Student()
         {
             Ratings = new Collection<Rating>();
@@ -21,9 +20,10 @@ namespace Diary1.Models.Domains
         public string Comments { get; set; }
         public bool Activities { get; set; }
         public int GroupId { get; set; }
-
-
         public Group Group { get; set; }
         public ICollection<Rating> Ratings { get; set; }
     }
 }
+
+
+

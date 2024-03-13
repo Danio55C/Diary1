@@ -68,10 +68,10 @@ namespace Diary1.ViewModels
 
            window.Close();
         }
-        
     }
-
 }
+        
+
 
 
         

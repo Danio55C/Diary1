@@ -28,8 +28,6 @@ namespace Diary1.Commands
             add { CommandManager.RequerySuggested += value; }
             remove { CommandManager.RequerySuggested -= value; }
         }
-
-
         public void RaiseCanExecuteChanged()
         {
             CommandManager.InvalidateRequerySuggested();
@@ -42,7 +40,6 @@ namespace Diary1.Commands
 
             return canExecute(parameter);
         }
-
         public async void Execute(object parameter)
         {
             Interlocked.Exchange(ref isExecuting, 1);
@@ -60,3 +57,6 @@ namespace Diary1.Commands
         }
     }
 }
+
+
+

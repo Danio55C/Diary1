@@ -14,8 +14,6 @@ namespace Diary1.Models.Wrappers
         {
             Group = new GroupWrapper();
         }
-
-
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -30,7 +28,6 @@ namespace Diary1.Models.Wrappers
 
         private bool _isFirstNameValid;
         private bool _isLastNameValid;
-
         public string this[string columnName]
         {
             get
@@ -67,11 +64,7 @@ namespace Diary1.Models.Wrappers
                 return Error;
             }
         }
-
-
-
         public string Error { get; set; }
-
         public bool IsValid
         {
             get
@@ -81,5 +74,12 @@ namespace Diary1.Models.Wrappers
         }
     }
 }
+
+
+
+
+
+
+
 
 

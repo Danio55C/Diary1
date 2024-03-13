@@ -38,83 +38,6 @@ namespace Diary1.ViewModels
             EdditSettingsCommand = new RelayCommand(EdditSetings);
             LoadedWindowCommand = new RelayCommand(LoadedWindow);
         }
-
-
-
-
-
-
-
-
-
-
-        private async void LoadedWindow(object obj)
-        {
-            
-            if (!IsServerConnected())
-            {
-                var metroWindow = Application.Current.MainWindow as MetroWindow;
-                var dialog = await metroWindow.ShowMessageAsync("Błąd połączenia z serwerem!!",
-                "Nie udało się połaczyć z serwerem bazy danych, czy chcesz edytować ustawienia połaczenia ?",
-                MessageDialogStyle.AffirmativeAndNegative);
-                if (dialog == MessageDialogResult.Affirmative)
-                {
-                    Settings settingsWindow = new Settings();
-                    settingsWindow.ShowDialog();
-                }
-                else
-                {
-                    Application.Current.Shutdown();
-                }
-            }
-            else
-            {
-                RefreshDiary();
-                InitGroups();
-            }
-        }
-
-        private static bool IsServerConnected()
-        {
-            try
-            {
-                using (var context = new ApplicationDbContext())
-                {
-                    context.Database.Connection.Open();
-                    context.Database.Connection.Close();
-                }
-                return true;
-            }
-            catch (SqlException)
-            {
-                return false;
-            }
-        }
-
-
-        //using (var context = new ApplicationDbContext())
-        //{
-        //    context.Database.Connection.Open();
-        //    if (context.Database.Connection.State == ConnectionState.Open)
-        //    {
-        //        MessageBox.Show("Test");
-        //        return true;
-
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("dupa");
-        //        return false;
-        //    }
-
-        //}
-
-
-        private void EdditSetings(object obj)
-        {
-            Settings settingsWindow = new Settings();
-            settingsWindow.ShowDialog();
-        }
         public ICommand AddStudentCommand { get; set; }
         public ICommand EdditStudentCommand { get; set; }
         public ICommand DeleteStudentCommand { get; set; }
@@ -171,6 +94,71 @@ namespace Diary1.ViewModels
                 OnPropertChanged();
             }
         }
+        private async void LoadedWindow(object obj)
+        {
+
+            if (!IsServerConnected())
+            {
+                var metroWindow = Application.Current.MainWindow as MetroWindow;
+                var dialog = await metroWindow.ShowMessageAsync("Błąd połączenia z serwerem!!",
+                "Nie udało się połaczyć z serwerem bazy danych, czy chcesz edytować ustawienia połaczenia ?",
+                MessageDialogStyle.AffirmativeAndNegative);
+                if (dialog == MessageDialogResult.Affirmative)
+                {
+                    Settings settingsWindow = new Settings();
+                    settingsWindow.ShowDialog();
+                }
+                else
+                {
+                    Application.Current.Shutdown();
+                }
+            }
+            else
+            {
+                RefreshDiary();
+                InitGroups();
+            }
+        }
+
+        private static bool IsServerConnected()
+        {
+            try
+            {
+                using (var context = new ApplicationDbContext())
+                {
+                    context.Database.Connection.Open();
+                    context.Database.Connection.Close();
+                }
+                return true;
+            }
+            catch (SqlException)
+            {
+                return false;
+            }
+        }
+        //using (var context = new ApplicationDbContext())
+        //{
+        //    context.Database.Connection.Open();
+        //    if (context.Database.Connection.State == ConnectionState.Open)
+        //    {
+        //        MessageBox.Show("Test");
+        //        return true;
+
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("dupa");
+        //        return false;
+        //    }
+
+        //}
+
+
+        private void EdditSetings(object obj)
+        {
+            Settings settingsWindow = new Settings();
+            settingsWindow.ShowDialog();
+        }
         private void RefreshStudents(object obj)
         {
             RefreshDiary();
@@ -191,12 +179,9 @@ namespace Diary1.ViewModels
 
             if (dialog != MessageDialogResult.Affirmative)
                 return;
-
             _repository.DeleteStudent(SelectedStudent.Id);
-
             RefreshDiary();
         }
-
         private void AddEdditStudent(object obj)
         {
             var addEditStudentWindow = new AddEdditStudentView(obj as StudentWrapper);
@@ -210,10 +195,10 @@ namespace Diary1.ViewModels
 
         private void RefreshDiary()
         {
-
             Students = new ObservableCollection<StudentWrapper>(
             _repository.GetStudents(SelectedGroupId));
         }
+
 
         private void InitGroups()
         {
@@ -225,6 +210,23 @@ namespace Diary1.ViewModels
         }
     }
 }
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
 
        
 

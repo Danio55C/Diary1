@@ -11,8 +11,6 @@ namespace Diary1.Models
 {
     public class UserDatabaseSettings : IDataErrorInfo
     {
-
-
         public string ServerAdress
         {
             get
@@ -186,6 +184,8 @@ namespace Diary1.Models
 
     }
 }
+
+
 
 
 

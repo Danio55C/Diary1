@@ -11,7 +11,6 @@ namespace Diary1.Models.Wrappers
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
         public string this[string columnName]
         {
             get
@@ -32,8 +31,6 @@ namespace Diary1.Models.Wrappers
             }
         }
         public string Error { get; set; }
-
-
         public bool IsValid
         {
             get
@@ -42,6 +39,9 @@ namespace Diary1.Models.Wrappers
             }
         }
     }
+
+
+
 
 
 }

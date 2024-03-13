@@ -17,10 +17,6 @@ namespace Diary1.Commands
         {
 
         }
-
-
-
-
         public RelayCommand(Action<object> execute, Predicate<object> canExecute)
         {
             _execute = execute ?? throw new ArgumentNullException("execute");
@@ -47,11 +43,15 @@ namespace Diary1.Commands
         {
             _execute(parameter);
         }
-
-
-
-
-
     }
-
 }
+
+
+
+
+
+
+
+
+
+

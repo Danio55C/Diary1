@@ -92,20 +92,12 @@ namespace Diary1.ViewModels
 
             if (!Student.IsValid)
                 return;
-
-
             if (!IsUpdate)
-
                 AddStudent();
-
             else
-
                 UpdateStudent();
-
-            //zapis do bazy
             CloseWindow(obj as Window);
         }
-
         private void UpdateStudent()
         {
             _repository.UpdateStudent(Student);
@@ -120,16 +112,10 @@ namespace Diary1.ViewModels
         {
             CloseWindow(obj as Window);
         }
-
-
-
         private void CloseWindow(Window window)
         {
             window.Close();
         }
-
-
-
         private void InitGroups()
         {
             var groups = _repository.GetGroups();
@@ -139,6 +125,20 @@ namespace Diary1.ViewModels
             SelectedGroupId = Student.Group.Id;
         }
     }
-
 }
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
 

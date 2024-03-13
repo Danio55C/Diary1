@@ -17,7 +17,6 @@ namespace Diary1
         {
 
         }
-
         public DbSet<Student> Students { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<Rating> Ratings { get; set; }
@@ -35,11 +34,12 @@ namespace Diary1
             //databaseSettings.DataBaseName = "Diary";
             //databaseSettings.DataBaseUser = "sqldaniel";
             //databaseSettings.DataBasePassword = "1234";
-
             return databaseSettings;
         }
     }
 }
+
+
 
     //public class MyEntity
     //{

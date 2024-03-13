@@ -13,10 +13,10 @@ namespace Diary1.Models.Configurations
         public RatingConfiguration()
         {
             ToTable("dbo.Ratings");
-
-            
             HasKey(x=> x.Id);  
         }
-
     }
 }
+
+            
+

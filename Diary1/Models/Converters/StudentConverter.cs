@@ -56,7 +56,6 @@ namespace Diary.Models.Converters
                 Activities = model.Activities
             };
         }
-
         public static List<Rating> ToRatingDao(this StudentWrapper model)
         {
             var ratings = new List<Rating>();
@@ -110,8 +109,9 @@ namespace Diary.Models.Converters
                             StudentId = model.Id,
                             SubjectId = (int)Subject.Technology
                         }));
-
             return ratings;
         }
     }
 }
+
+
